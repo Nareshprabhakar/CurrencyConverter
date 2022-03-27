@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="splash_screen">Unity is Strength</string>
+
+    <string name="title_1">Currency</string>
+    <string name="title_2">Converter</string>
+    <string name="tv_from">From</string>
+    <string name="tv_to">To</string>
+    <string name="hint">Amount</string>
+    <string name="converter">Convert</string>
+    <string name="from_unit">Unit</string>
+    <string name="result">Result</string>
+    <string name="to_unit">Unit</string>
+    <string name="converted_amount">Converted Amount</string>
+    <string name="progress_bar_text">please_wait</string>
+    <string name="image">image</string>
+</resources>

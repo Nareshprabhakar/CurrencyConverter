@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_"
+    tools:context=".activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cl_margin_top"
+        android:padding="@dimen/layout_padding">
+
+        <TextView
+            android:id="@+id/tv_title_line_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_1"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/main_title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_line_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_2"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/main_title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_line_1" />
+
+        <TextView
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_from_margin_top"
+            android:text="@string/tv_from"
+            android:textColor="@color/black"
+            android:textSize="@dimen/from_to_text_size"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@id/ms_from_country"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_line_2" />
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/ms_from_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/btn_start_end_margin"
+            android:layout_marginTop="@dimen/spinner_margin_top"
+            android:layout_marginEnd="@dimen/btn_start_end_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_from" />
+
+        <ImageView
+            android:id="@+id/iv_swap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_swap_vert_24"
+            android:contentDescription="@string/image"
+            android:layout_marginTop="@dimen/iv_margin_top"
+            android:layout_marginBottom="@dimen/iv_margin_bottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ms_from_country"
+            app:layout_constraintBottom_toTopOf="@id/tv_to"
+            />
+
+        <TextView
+            android:id="@+id/tv_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_to_margin_top"
+            android:text="@string/tv_to"
+            android:textColor="@color/black"
+            android:textSize="@dimen/from_to_text_size"
+            android:textStyle="normal"
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintBottom_toTopOf="@id/ms_to_country"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_swap" />
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/ms_to_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/btn_start_end_margin"
+            android:layout_marginTop="@dimen/spinner_margin_top"
+            android:layout_marginEnd="@dimen/btn_start_end_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_to" />
+
+        <TextView
+            android:id="@+id/tv_from_currency_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/from_unit"
+            android:textSize="@dimen/unit_text_size"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintHorizontal_bias="0.90"
+            app:layout_constraintBottom_toTopOf="@id/et_amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/btn_start_end_margin"
+            android:layout_marginTop="@dimen/et_margin_top"
+            android:layout_marginEnd="@dimen/btn_start_end_margin"
+            android:autofillHints="no"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/hint"
+            android:padding="10dp"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/from_to_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ms_to_country" />
+
+        <android.widget.Button
+            android:id="@+id/btn_convert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/btn_start_end_margin"
+            android:layout_marginTop="@dimen/btn_margin_top"
+            android:layout_marginEnd="@dimen/btn_start_end_margin"
+            android:background="@drawable/button_gradient_background"
+            android:text="@string/converter"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_text_size"
+            app:layout_constraintTop_toBottomOf="@id/et_amount" />
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.479"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_convert"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_result_unit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/rl_margin_top"
+            android:layout_marginStart="@dimen/btn_start_end_margin"
+            android:layout_marginEnd="@dimen/btn_start_end_margin"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_convert">
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="@dimen/from_to_text_size" />
+
+            <TextView
+                android:id="@+id/tv_to_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:text="@string/to_unit"
+                android:textSize="@dimen/unit_text_size" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_result"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/btn_start_end_margin"
+            android:layout_marginTop="@dimen/et_result_margin_top"
+            android:layout_marginEnd="@dimen/btn_start_end_margin"
+            android:autofillHints="no"
+            android:background="@drawable/edit_text_background"
+            android:ellipsize="start"
+            android:enabled="false"
+            android:hint="@string/converted_amount"
+            android:textSize="@dimen/from_to_text_size"
+            android:padding="10dp"
+
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_result_unit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</ScrollView>
